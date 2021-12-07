@@ -41,5 +41,6 @@ model = {'l1':[13,26],
 #execute
 epochs = 10
 interval = 1000
+batch_size = 16
 
 
