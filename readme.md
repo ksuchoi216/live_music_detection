@@ -78,7 +78,7 @@ Imbalanced dataset             |  balanced dataset(after Oversampling)
 ![imbalanced](img/imbalanced.png)  |  ![balanced](img/balanced.png)
 Left: non outliers Right: outliers| Left: non outliers Right: outliers
 
-# 3. Model
+# 3. Model (XGBoost)
 ## 3.1. Model
 In this project, this problem is considered as classification based on outlier labels. XGBoost algorithm was used for predicting the outlier class. Boosting is an ensemble algorithm with a sequential process. The gradient boosting is an approach where new models are trained to predict the residual(error = true - pridiction) of prior models. 
 
@@ -94,23 +94,27 @@ Detail gradient boosting algorithm is presented as follows:
 5. Regularisation and Prune branchs.
 6. Prediction sum (learning rate x prediction(each tree))
 
-## Optimisation
+## 3.2. Optimisation
+
+
 Through gridsearchCV, the best parameters were selected for better performance. 
 
-| Quartile of Liveness | Value |
+| Parameter | Value |
 | ----------------- | ----------- |
-| 1st Quartile | -0.618 |
-| 2nd Quartile(median) | -0.395 |
-| 3rd Quartile | -0.336 |
+| gamma | 0.25 |
+| learning_rate | 0.1 |
+| max_depth | 5 |
+| reg_lambda | 0 |
 
-## 3.2. Result
+## 3.3. Result
+please refer to model_master.ipynb file.
 
-# 4. Deep Learning Model(Additional Model)
+# 4. Model(Deep Learning)
 
 ## 4.1. Model
 
 ## 4.2. Result
 
-## Reference
+## 4.3. Reference
 1. https://developer.spotify.com/documentation/web-api/reference/#/operations/get-audio-features
 2. https://spotipy.readthedocs.io/en/2.16.1/

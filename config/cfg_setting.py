@@ -10,7 +10,6 @@ SPOTIPY_CLIENT_SECRET = 'bc71b4a60b154c4687a702d115d8dfba'
 #sample
 n_samples = 10000 #select the number of samples
 
-
 #data
 audio_feat_cols = ['danceability', 'energy', 'key', 'loudness', 'mode', 'speechiness', 'acousticness', 
              'instrumentalness', 'liveness', 'valence', 'tempo', 'type', 'id', 'uri', 'track_href', 
@@ -27,6 +26,11 @@ selected_cols = ['danceability', 'energy', 'key', 'loudness', 'mode', 'speechine
 drop_cols = ['outlier','live']
 label_col = 'outlier'
 
+#deep learning model
+#image save filepath
+img_save_path = '/Volumes/ehd/prog/data/soundmouse/img_sample30s/'
+np_save_path = '/Users/KC/My Drive/soundmouse/data/'
+
 #model
 model = {'l1':[13,26],
          'l2':[26,13],
@@ -37,3 +41,5 @@ model = {'l1':[13,26],
 #execute
 epochs = 10
 interval = 1000
+
+
