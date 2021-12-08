@@ -109,12 +109,29 @@ Through gridsearchCV, the best parameters were selected for better performance.
 ## 3.3. Result
 please refer to model_master.ipynb file.
 
-# 4. Model(Deep Learning)
+## 5.1. Model
+### 5.1.1. convolution neural network
+As mentioned above, the model is a convolution neural network(CNN) with a fully connected neural network(FCNN). The convolution neural network uses a convolutional product between image pixels and kernel(filter) values, and the model assigns importance(learnable weights and biases). This network can take an image as input data that contains spatial information. In addition, shared weights in each kernel are used for reducing the number of parameters compared with a fully connected neural network. For predicting a class, the fully connected neural network was used after computing CNNs.
 
-## 4.1. Model
+### 5.1.2. detial model architecture
+This model adopted 3 layers of convolution neural networks(CNN) and 2 layers of fully connected neural networks(FCNN). The detail layer information is presented as follows:
 
-## 4.2. Result
+<figure>
+    <figcaption align="center"> Model Summary </figcaption>
+    <img
+    src="img/model_summary.png"
+    alt="audio feature"
+    align="center"
+    style="width:500px; height:350px">
+    <!-- <figcaption align="center"> </figcaption> -->
+</figure>
 
-## 4.3. Reference
+
+## 5.2. Result
+please refer to model_deep_learning.ipynb file.
+
+## 5.3. Reference
 1. https://developer.spotify.com/documentation/web-api/reference/#/operations/get-audio-features
 2. https://spotipy.readthedocs.io/en/2.16.1/
+3. https://librosa.org/doc/latest/index.html#
+4. https://www.kdnuggets.com/2020/02/audio-data-analysis-deep-learning-python-part-1.html
